@@ -1,0 +1,10 @@
+---
+declared-services: 
+  sample-nodejs-cache-redis: 
+    label: redis-2.6 
+    plan: 100   
+applications:
+- name: sample-nodejs-cache
+  memory: 128M
+  services:
+  - sample-nodejs-cache-redis
