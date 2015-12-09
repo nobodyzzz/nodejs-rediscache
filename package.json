@@ -12,9 +12,13 @@
     "method-override": "2.3.x",
     "morgan": "1.6.x",
     "errorhandler": "1.4.x",
-	"redis": "2.1.x"
+	"redis": "2.1.x",
+	"cf-deployment-tracker-client": "*"
   },
-  "repository": {},
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/ibmecod/nodejs-rediscache.git"
+  },
   "engines": {
   	"node": "0.12.x"  	
   }
