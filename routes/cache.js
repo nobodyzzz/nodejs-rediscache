@@ -28,10 +28,10 @@ if(process.env.hasOwnProperty("VCAP_SERVICES")) {
     var env = JSON.parse(process.env.VCAP_SERVICES);
     var redisprops = getEnv(env);
 
-    // validate that not only are we within bluemix, but we have a bound Redis service
+    // validate that not only are we within predix, but we have a bound Redis service
     if(typeof redisprops != "undefined") {
 		var options = {
-            			host: redisprops.hostname,
+            			host: redisprops.hostname || redisprops.host,
 						port: redisprops.port, 
 		                auth_pass: redisprops.password
 					  };

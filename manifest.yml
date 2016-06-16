@@ -1,14 +1,10 @@
 ---
 declared-services: 
   sample-nodejs-cache-Redis: 
-    label: redis 
-    plan: 100
-  sample-nodejs-cache-MonitoringAndAnalytics:
-    label: MonitoringAndAnalytics
-    plan: Free	
+    label: redis-1
+    plan: shared-vm
 applications:
 - name: sample-nodejs-cache
   memory: 128M
   services:
   - sample-nodejs-cache-Redis
-  - sample-nodejs-cache-MonitoringAndAnalytics
